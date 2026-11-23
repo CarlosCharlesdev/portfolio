@@ -310,9 +310,11 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.1; }
 .site-footer a { color: var(--muted); }
 
 /* Elementos que só aparecem no celular */
-.theme-cycle, .bottom-bar { display: none; }
+.theme-cycle, .bottom-bar, .stack-band .dup { display: none; }
 .more > summary { display: none; }
 .more { display: flex; flex-direction: column; gap: 14px; }
+
+@keyframes letreiro { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
 /* ===== Celular ===== */
 @media (max-width: 640px) {
@@ -350,9 +352,20 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.1; }
     .proofs::-webkit-scrollbar { display: none; }
     .proofs li { flex: 0 0 auto; scroll-snap-align: start; box-shadow: 2px 2px 0 var(--shadow); }
 
-    .stack-band ul { flex-wrap: nowrap; overflow-x: auto; justify-content: flex-start; gap: 22px; scrollbar-width: none; }
-    .stack-band ul::-webkit-scrollbar { display: none; }
-    .stack-band li { flex: 0 0 auto; }
+    /* Tecnologias: letreiro que passa sozinho (para quem prefere menos movimento, vira faixa de arrastar) */
+    .stack-band { overflow: hidden; }
+    .stack-band ul { flex-wrap: nowrap; justify-content: flex-start; gap: 0; width: max-content; max-width: none; margin: 0; padding-left: 0; padding-right: 0; }
+    .stack-band li { flex: 0 0 auto; padding: 0 14px; }
+    .stack-band li::after { content: ""; display: inline-block; width: 6px; height: 6px; margin-left: 28px; vertical-align: middle; background: var(--primary); }
+    .stack-band .dup { display: list-item; list-style: none; }
+    @media (prefers-reduced-motion: no-preference) {
+        .stack-band ul { animation: letreiro 24s linear infinite; }
+        .stack-band:active ul { animation-play-state: paused; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+        .stack-band { overflow-x: auto; }
+        .stack-band .dup { display: none; }
+    }
 
     /* Seções */
     .section { padding-top: 80px; }
