@@ -35,8 +35,8 @@
         const escolha = lerEscolha();
         const tema = escolha === 'auto' ? periodoAtual() : escolha;
         root.setAttribute('data-theme', tema);
-        // A saudação segue o relógio, mesmo com um tema fixado.
-        if (saudacao) saudacao.textContent = textos[periodoAtual()].oi;
+        // A saudação acompanha o tema: no automático segue o relógio, fixado segue a escolha.
+        if (saudacao) saudacao.textContent = textos[tema].oi;
         if (legenda) legenda.textContent = textos[tema].legenda;
         if (themeColor) themeColor.setAttribute('content', cores[tema]);
         botoes.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.tema === escolha)));
