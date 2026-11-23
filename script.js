@@ -1,74 +1,56 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // 1. Header Scroll Effect
-    const header = document.getElementById('header');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    });
+// Tema por horário: manhã (5h–12h), tarde (12h–18h), noite (18h–5h).
+// O seletor no topo permite fixar um tema; "auto" volta a seguir o relógio.
+// Serve para as duas versões do site (pt-BR e en), pelo atributo lang do <html>.
+(function () {
+    const root = document.documentElement;
+    const en = (root.lang || '').toLowerCase().startsWith('en');
+    const botoes = document.querySelectorAll('.theme-switch button');
+    const saudacao = document.getElementById('saudacao');
+    const legenda = document.getElementById('legenda');
+    const themeColor = document.querySelector('meta[name="theme-color"]');
 
-    // 2. Mobile Menu Toggle (Simples)
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-
-    menuToggle.addEventListener('click', () => {
-        navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-        if (navLinks.style.display === 'flex') {
-            navLinks.style.flexDirection = 'column';
-            navLinks.style.position = 'absolute';
-            navLinks.style.top = '100%';
-            navLinks.style.left = '0';
-            navLinks.style.width = '100%';
-            navLinks.style.backgroundColor = 'rgba(10, 10, 10, 0.95)';
-            navLinks.style.padding = '2rem';
-            navLinks.style.textAlign = 'center';
-        }
-    });
-
-    // 3. Scroll Reveal Animation
-    const revealElements = document.querySelectorAll('.reveal');
-    
-    const revealOnScroll = () => {
-        const triggerBottom = window.innerHeight * 0.85;
-        
-        revealElements.forEach(el => {
-            const elTop = el.getBoundingClientRect().top;
-            if (elTop < triggerBottom) {
-                el.classList.add('active');
-            }
-        });
+    const cores = { manha: '#EAF2F6', tarde: '#EEF1EA', noite: '#1C2233' };
+    const textos = en ? {
+        manha: { oi: 'Good morning', legenda: 'First coffee of the day: open to freelance projects and job conversations.' },
+        tarde: { oi: 'Good afternoon', legenda: 'Afternoon coffee: open to freelance projects and job conversations.' },
+        noite: { oi: 'Good evening', legenda: 'Night shift: open to freelance projects and job conversations.' }
+    } : {
+        manha: { oi: 'Bom dia', legenda: 'Primeiro café do dia: aberto a projetos freelance e conversas sobre vagas.' },
+        tarde: { oi: 'Boa tarde', legenda: 'Café da tarde: aberto a projetos freelance e conversas sobre vagas.' },
+        noite: { oi: 'Boa noite', legenda: 'Turno da noite: aberto a projetos freelance e conversas sobre vagas.' }
     };
 
-    window.addEventListener('scroll', revealOnScroll);
-    // Trigger once on load
-    setTimeout(revealOnScroll, 100);
+    const periodoAtual = () => {
+        const h = new Date().getHours();
+        return h >= 5 && h < 12 ? 'manha' : h >= 12 && h < 18 ? 'tarde' : 'noite';
+    };
+    const lerEscolha = () => {
+        try { return localStorage.getItem('tema') || 'auto'; } catch (e) { return 'auto'; }
+    };
+    const salvarEscolha = (valor) => {
+        try { localStorage.setItem('tema', valor); } catch (e) { /* navegação privada */ }
+    };
 
-    // 4. Form Submission (Prevent Default)
-    const contactForm = document.querySelector('.contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Obrigado pelo contato, Carlos Charles responderá em breve!');
-            contactForm.reset();
-        });
-    }
+    const aplicar = () => {
+        const escolha = lerEscolha();
+        const tema = escolha === 'auto' ? periodoAtual() : escolha;
+        root.setAttribute('data-theme', tema);
+        // A saudação segue o relógio, mesmo com um tema fixado.
+        if (saudacao) saudacao.textContent = textos[periodoAtual()].oi;
+        if (legenda) legenda.textContent = textos[tema].legenda;
+        if (themeColor) themeColor.setAttribute('content', cores[tema]);
+        botoes.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.tema === escolha)));
+    };
 
-    // 5. Smooth Scroll for all links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
-                // Close mobile menu if open
-                if (window.innerWidth <= 768) {
-                    navLinks.style.display = 'none';
-                }
-            }
-        });
-    });
-});
+    botoes.forEach((b) => b.addEventListener('click', () => {
+        salvarEscolha(b.dataset.tema);
+        aplicar();
+    }));
+
+    aplicar();
+    // Confere o horário a cada minuto: se alguém estiver na página às 18h, ela vira noite sozinha.
+    setInterval(aplicar, 60 * 1000);
+
+    const ano = document.getElementById('ano');
+    if (ano) ano.textContent = new Date().getFullYear();
+})();

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="tarde">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlos Charles | Java Developer · Spring Boot · Vue.js</title>
+    <meta name="description" content="Carlos Charles, Java developer in Porto Velho, Brazil. Back end with Java, Jakarta EE and Spring Boot on a tax ERP used by city governments at E&amp;L, creator of S.A.G.E, and builder of web systems, APIs and WhatsApp automations for businesses.">
+    <meta property="og:title" content="Carlos Charles | Java Developer">
+    <meta property="og:description" content="Calm code for systems that can't stop. Open to projects and job opportunities.">
+    <meta property="og:image" content="https://carloscharlesdev.cloud/foto-og.jpg">
+    <meta name="theme-color" content="#EEF1EA">
+    <link rel="canonical" href="https://carloscharlesdev.cloud/en/">
+    <link rel="alternate" hreflang="pt-BR" href="https://carloscharlesdev.cloud/">
+    <link rel="alternate" hreflang="en" href="https://carloscharlesdev.cloud/en/">
+    <link rel="alternate" hreflang="x-default" href="https://carloscharlesdev.cloud/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://carloscharlesdev.cloud/en/">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="pt_BR">
+    <meta name="twitter:card" content="summary">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Carlos Charles Batista dos Santos", "alternateName": "Carlos Charles", "jobTitle": "Java Developer", "url": "https://carloscharlesdev.cloud/en/", "image": "https://carloscharlesdev.cloud/foto-og.jpg", "address": {"@type": "PostalAddress", "addressLocality": "Porto Velho", "addressRegion": "RO", "addressCountry": "BR"}, "worksFor": {"@type": "Organization", "name": "E&L Produções de Software"}, "alumniOf": {"@type": "CollegeOrUniversity", "name": "UniSapiens"}, "knowsAbout": ["Java", "Jakarta EE", "Spring Boot", "Vue.js", "PostgreSQL", "JasperReports", "REST APIs", "Linux", "Nginx"], "sameAs": ["https://www.linkedin.com/in/carlos-charles810426302", "https://github.com/CarlosCharlesdev"]}</script>
+    <link rel="icon" href="../favicon-64.png" type="image/png">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700&family=Silkscreen&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <script>
+        /* Sets the theme before the page paints (avoids a flash). */
+        (function () {
+            var escolha = 'auto';
+            try { escolha = localStorage.getItem('tema') || 'auto'; } catch (e) {}
+            var h = new Date().getHours();
+            var auto = h >= 5 && h < 12 ? 'manha' : h >= 12 && h < 18 ? 'tarde' : 'noite';
+            document.documentElement.setAttribute('data-theme', escolha === 'auto' ? auto : escolha);
+        })();
+    </script>
+</head>
+<body>
+
+    <a class="skip" href="#conteudo">Skip to content</a>
+
+    <header class="site-header">
+        <div class="container header-row">
+            <a href="#inicio" class="brand">
+                <svg class="mug" viewBox="0 0 10 10" width="24" height="24" aria-hidden="true"><rect class="steam" x="3" y="0" width="1" height="1"/><rect class="steam" x="5" y="1" width="1" height="1"/><rect class="steam" x="4" y="2" width="1" height="1"/><rect class="mug-body" x="1" y="3" width="6" height="6"/><rect class="coffee" x="2" y="3" width="4" height="1"/><rect class="mug-body" x="7" y="4" width="2" height="1"/><rect class="mug-body" x="8" y="5" width="1" height="2"/><rect class="mug-body" x="7" y="7" width="2" height="1"/></svg>
+                Carlos Charles
+            </a>
+            <div class="header-tools">
+                <nav aria-label="Main">
+                    <ul class="nav">
+                        <li><a href="#trabalhos">Work</a></li>
+                        <li><a href="#caminho">Experience</a></li>
+                        <li><a href="#contato">Contact</a></li>
+                    </ul>
+                </nav>
+                <a class="lang" href="../" hreflang="pt-BR" lang="pt-BR">PT</a>
+                <div class="theme-switch" role="group" aria-label="Page theme">
+                    <button type="button" data-tema="auto">auto</button>
+                    <button type="button" data-tema="manha">morning</button>
+                    <button type="button" data-tema="tarde">afternoon</button>
+                    <button type="button" data-tema="noite">night</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="conteudo">
+        <!-- INTRO -->
+        <section id="inicio" class="container hero">
+            <div class="hero-text">
+                <p class="hello">
+                    <img class="avatar" src="../foto-avatar.jpg" alt="Photo of Carlos Charles" width="56" height="56">
+                    <span><span id="saudacao">Hello</span>, I'm Carlos.</span>
+                </p>
+                <h1>Calm code for systems that can't stop.</h1>
+                <p class="lead">Java developer focused on back end, based in Porto Velho, Brazil. At E&amp;L Produções de Software, I work on the tax management ERP used by city governments. For businesses, I build web systems, APIs and WhatsApp automations without the hassle.</p>
+                <div class="paths">
+                    <a class="path card" href="#contato">
+                        <span class="path-who">I have a project</span>
+                        <span class="path-go">Ask for a quote</span>
+                    </a>
+                    <a class="path card" href="#caminho">
+                        <span class="path-who">I'm hiring</span>
+                        <span class="path-go">See experience and résumé</span>
+                    </a>
+                </div>
+                <ul class="proofs" aria-label="Highlights">
+                    <li><strong>S.A.G.E</strong> in production, with an active client</li>
+                    <li><strong>2nd place</strong> at Béra Hackathon 2025</li>
+                    <li><strong>Senior</strong> at E&amp;L Software</li>
+                </ul>
+            </div>
+            <figure class="hero-scene">
+                <div class="scene card card-lg">
+                    <img class="scene-img scene-manha" src="../pixel/manha.svg" alt="Morning pixel art: laptop with code, a coffee mug and a sunny window" width="384" height="288">
+                    <img class="scene-img scene-tarde" src="../pixel/tarde.svg" alt="Afternoon pixel art: laptop with code, a coffee mug and a sunset window" width="384" height="288">
+                    <img class="scene-img scene-noite" src="../pixel/noite.svg" alt="Night pixel art: laptop with code, a coffee mug and a window with the moon and stars" width="384" height="288">
+                </div>
+                <figcaption><span class="status-dot" aria-hidden="true"></span><span id="legenda">Open to freelance projects and job conversations.</span></figcaption>
+            </figure>
+        </section>
+
+        <div class="stack-band">
+            <ul class="container" aria-label="Main technologies">
+                <li>Java 21</li><li>Jakarta EE</li><li>Spring Boot</li><li>Vue.js</li><li>PostgreSQL</li><li>JasperReports</li><li>Linux and Nginx</li><li>Git</li>
+            </ul>
+        </div>
+
+        <!-- PROJECTS AND SKILLS -->
+        <section id="trabalhos" class="container section">
+            <h2>Selected work</h2>
+            <p class="section-lead">Two systems I built myself and run in production: an ERP used every day by a restaurant and an AI-powered customer service platform.</p>
+
+            <div class="projects">
+                <article class="project">
+                    <div class="project-img card"><img src="../sage.jpg" alt="S.A.G.E recipe costing screen, with cost, sale price, profit and food cost for each item (interface in Portuguese)" loading="lazy" width="1520" height="950"></div>
+                    <div class="project-body">
+                        <p class="badge"><span class="status-dot" aria-hidden="true"></span>In production, with an active client</p>
+                        <h3>S.A.G.E</h3>
+                        <p class="project-sub">ERP for purchasing, inventory and management</p>
+                        <p class="muted">A business management system built for restaurants. At closing time, the team records what's left over; S.A.G.E works out how much of each item to order and sends the order to each supplier over the restaurant's own WhatsApp. Reports come out as PDFs in the system or straight on WhatsApp, for anyone allowed to request them.</p>
+                        <figure class="quote">
+                            <blockquote>“This isn't just automation, it's trust: the data is safe, it's fast, and even a child can use the system.”</blockquote>
+                            <figcaption>Owner of the burger restaurant that runs S.A.G.E, Pimenta Bueno, Brazil (translated from Portuguese)</figcaption>
+                        </figure>
+                        <ul class="pixel-list project-points">
+                            <li>Automatic purchase orders over WhatsApp, with a rule per item: weekly table, minimum and maximum stock, or recipe by production range</li>
+                            <li>Inventory with receiving, stock in and out, waste tracking and weekly or monthly stock counts</li>
+                            <li>Cost management: recipe costing with cost, food cost percentage and margin for each menu item</li>
+                            <li>JasperReports reports on orders, inventory and KPIs, issued in the system or over WhatsApp</li>
+                            <li>Multi-tenant, and I built the whole cycle: data modeling, REST API, interface and deployment on a Linux VPS with Nginx and HTTPS</li>
+                        </ul>
+                        <dl class="meta">
+                            <dt>Built for</dt><dd>Restaurants and small food businesses. In daily use at a burger restaurant in Pimenta Bueno, Brazil</dd>
+                            <dt>Built with</dt><dd>Vue.js 3, Spring Boot, PostgreSQL, JasperReports, WhatsApp integration</dd>
+                        </dl>
+                        <a class="btn-demo" href="https://wa.me/5569992700080?text=Hi%20Carlos%21%20I%20saw%20S.A.G.E%20on%20your%20portfolio%20and%20I%27d%20like%20a%20demo." target="_blank" rel="noopener">Request a demo</a>
+                    </div>
+                </article>
+
+                <article class="project reverse">
+                    <div class="project-img card chat-mock" role="img" aria-label="Illustrative example of an automated customer service conversation">
+                        <p class="chat-bar"><span class="status-dot" aria-hidden="true"></span>Store support</p>
+                        <p class="msg in">Hi! Do you have brioche burger buns?</p>
+                        <p class="msg out">We do! I just checked the stock. How many packs would you like?</p>
+                        <p class="msg in">Three, please.</p>
+                        <p class="msg out">Order noted: 3 packs of brioche buns. I'll let you know when it's out for delivery.</p>
+                        <p class="chat-note">Illustrative example</p>
+                    </div>
+                    <div class="project-body">
+                        <p class="badge"><span class="status-dot" aria-hidden="true"></span>In production</p>
+                        <h3>AI customer service</h3>
+                        <p class="project-sub">Multi-tenant automated customer service platform</p>
+                        <p class="muted">An assistant that answers customers over messaging: it looks up the catalog, checks stock and records orders, always with the database as the single source of truth. The AI runs on our own server, with no per-message cost and no data sent outside.</p>
+                        <ul class="pixel-list project-points">
+                            <li>One installation serves several businesses, each with its own isolated catalog and settings</li>
+                            <li>Admin panel with bcrypt-hashed passwords and sessions that expire on their own</li>
+                            <li>Protection against AI manipulation (prompt injection) with filters and output validation</li>
+                        </ul>
+                        <dl class="meta">
+                            <dt>Built for</dt><dd>Businesses that serve and sell over WhatsApp</dd>
+                            <dt>Built with</dt><dd>Node.js, PostgreSQL, local LLM (Ollama), REST APIs</dd>
+                        </dl>
+                        <a class="btn-demo" href="https://wa.me/5569992700080?text=Hi%20Carlos%21%20I%20saw%20the%20AI%20customer%20service%20platform%20on%20your%20portfolio%20and%20I%27d%20like%20a%20demo." target="_blank" rel="noopener">Request a demo</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="duo">
+                <div class="card services">
+                    <h3>What I can build for you</h3>
+                    <ul class="pixel-list">
+                        <li>Custom web systems shaped around your process</li>
+                        <li>APIs and integrations between systems</li>
+                        <li>Fast business websites that are easy to update</li>
+                        <li>Automatic notifications and customer service on WhatsApp</li>
+                    </ul>
+                </div>
+                <div class="card skills">
+                    <h3>What I work with</h3>
+                    <dl>
+                        <div><dt>Back end</dt><dd>Java 8 to 21, Jakarta EE / Java EE (EJB, JPA/Hibernate), Spring Boot, WildFly, Node.js, REST APIs</dd></div>
+                        <div><dt>Front end</dt><dd>Vue.js 3, Vite, GWT, JavaScript, HTML and CSS, Tailwind CSS, Bootstrap</dd></div>
+                        <div><dt>Data</dt><dd>PostgreSQL (modeling and query tuning), MySQL, MongoDB, JasperReports</dd></div>
+                        <div><dt>Infrastructure</dt><dd>Linux, VPS, Nginx, HTTPS with Certbot, Git and GitLab, Maven</dd></div>
+                        <div><dt>AI and integrations</dt><dd>Local LLMs with Ollama, OpenAI API, WhatsApp integration, multi-tenant architecture</dd></div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section id="caminho" class="container section">
+            <h2>How I got here</h2>
+            <p class="section-lead">From an internship at the Rondônia State Court of Justice to the tax ERP that runs in city governments.</p>
+
+            <article class="award card">
+                <figure class="award-photo">
+                    <img src="../equipe-hackathon.jpg" alt="Carlos and his team holding the 2nd place sign at Béra Hackathon" width="480" height="480" loading="lazy">
+                </figure>
+                <div class="award-text">
+                    <p class="badge"><span class="trophy" aria-hidden="true"></span>Porto Velho, 2025</p>
+                    <h3>2nd place at Béra Hackathon</h3>
+                    <p>In 48 hours, our team built a system to book appointments at public health clinics over messaging, with voice message support to make it easier for older people. We were the only university team on the podium, just 0.3 points behind first place.</p>
+                    <dl class="meta">
+                        <dt>Built with</dt><dd>Python, Node.js, Next.js, OpenAI API</dd>
+                    </dl>
+                </div>
+            </article>
+
+            <ol class="journey">
+                <li class="card job">
+                    <div class="job-head">
+                        <span class="when"><span class="mark mark-primary"></span>Jan 2026 – now</span>
+                        <strong>Senior Programming Assistant</strong>
+                        <span class="muted">E&amp;L Produções de Software</span>
+                    </div>
+                    <ul class="pixel-list job-points">
+                        <li>I develop GPI, an integrated public management ERP used by city governments, in its tax modules: property transfer tax (ITBI), tax debt collection and integration with the state business registry</li>
+                        <li>Took part in the migration from Java 8 to Java 21 (javax to jakarta) in a multi-module system built on EJB, WildFly and GWT</li>
+                        <li>I diagnose and fix production issues, from the server logs to the fix in code and in the database</li>
+                    </ul>
+                </li>
+                <li class="card job">
+                    <div class="job-head">
+                        <span class="when"><span class="mark mark-accent"></span>2026</span>
+                        <strong>Information security courses</strong>
+                        <span class="muted">Escola Superior de Redes, RNP</span>
+                    </div>
+                    <ul class="pixel-list job-points">
+                        <li>Passed Web Application CTF and Basic Malware Analysis</li>
+                    </ul>
+                </li>
+                <li class="card job">
+                    <div class="job-head">
+                        <span class="when"><span class="mark"></span>Jan 2025 – Jan 2026</span>
+                        <strong>Junior Programming Assistant</strong>
+                        <span class="muted">E&amp;L Produções de Software</span>
+                    </div>
+                    <ul class="pixel-list job-points">
+                        <li>New features and maintenance with Java EE (EJB, JPA/Hibernate), GWT and PostgreSQL</li>
+                        <li>Direct support to city governments: understanding the user's problem before touching the code</li>
+                        <li>Builds and dependencies with Maven, code versioned in Git</li>
+                    </ul>
+                </li>
+                <li class="card job">
+                    <div class="job-head">
+                        <span class="when"><span class="mark"></span>2024 – 2025</span>
+                        <strong>Systems Analyst Intern</strong>
+                        <span class="muted">Rondônia State Court of Justice (TJRO)</span>
+                    </div>
+                    <ul class="pixel-list job-points">
+                        <li>Internal judicial systems for judges' chambers and court sessions</li>
+                        <li>Requirements analysis in a high-stakes environment and my first experience with enterprise Java in production</li>
+                    </ul>
+                </li>
+                <li class="card job">
+                    <div class="job-head">
+                        <span class="when"><span class="mark"></span>2023 – 2026</span>
+                        <strong>Bachelor's in Information Systems</strong>
+                        <span class="muted">UniSapiens, expected graduation in 2026</span>
+                    </div>
+                </li>
+            </ol>
+
+            <div class="certs">
+                <h3>Certificates and events</h3>
+                <ul>
+                    <li><strong>Web Application CTF</strong><span>ESR, RNP, 2026</span></li>
+                    <li><strong>Basic Malware Analysis</strong><span>ESR, RNP, 2026</span></li>
+                    <li><strong>Build with AI: 1st Sustainable City Hackathon</strong><span>GDG Porto Velho, 2026</span></li>
+                    <li><strong>3rd Conexão Tech RO</strong><span>Rondônia State Government, 2026</span></li>
+                    <li><strong>Sebrae Supernova, season 1</strong><span>Sebrae, 2026</span></li>
+                    <li><strong>1st Rondônia Startup Connect</strong><span>Startup Connect RO, 2026</span></li>
+                    <li><strong>Desafio Liga Jovem: completion and state stage</strong><span>Sebrae, 2025</span></li>
+                    <li><strong>TONNIE Experience: Java and AI in Europe</strong><span>DIO, 2025</span></li>
+                    <li><strong>11th PyRO community meetup</strong><span>Python Rondônia, 2024</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contato" class="container section contact-wrap">
+            <div class="contact">
+                <div class="contact-text">
+                    <h2>Grab a coffee and tell me your idea.</h2>
+                    <p>A project for your business, a role on your team, or just a technical question. I reply the same day.</p>
+                    <div class="contact-actions">
+                        <a class="btn btn-primary" href="https://wa.me/5569992700080" target="_blank" rel="noopener">Message me on WhatsApp</a>
+                        <a class="btn btn-ghost" href="../curriculo.pdf" download>Download résumé (PDF, Portuguese)</a>
+                    </div>
+                    <ul class="contact-links">
+                        <li><a href="mailto:carloscharles1616@gmail.com">carloscharles1616@gmail.com</a></li>
+                        <li><a href="https://www.linkedin.com/in/carlos-charles810426302" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><a href="https://github.com/CarlosCharlesdev" target="_blank" rel="noopener">GitHub</a></li>
+                    </ul>
+                </div>
+                <div class="contact-mug" aria-hidden="true">
+                    <svg class="mug" viewBox="0 0 10 10" width="64" height="64"><rect class="steam" x="3" y="0" width="1" height="1"/><rect class="steam" x="5" y="1" width="1" height="1"/><rect class="steam" x="4" y="2" width="1" height="1"/><rect class="mug-body" x="1" y="3" width="6" height="6"/><rect class="coffee" x="2" y="3" width="4" height="1"/><rect class="mug-body" x="7" y="4" width="2" height="1"/><rect class="mug-body" x="8" y="5" width="1" height="2"/><rect class="mug-body" x="7" y="7" width="2" height="1"/><rect class="saucer" x="1" y="9" width="6" height="1"/></svg>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="container site-footer">
+        <p>© <span id="ano">2026</span> Carlos Charles. Made in Porto Velho, with plenty of coffee.</p>
+        <a href="#inicio">Back to top</a>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

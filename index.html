@@ -1,271 +1,312 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="tarde">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carlos Charles | Desenvolvedor Full Stack</title>
+    <title>Carlos Charles | Desenvolvedor Java · Spring Boot · Vue.js</title>
+    <meta name="description" content="Carlos Charles, desenvolvedor Java em Porto Velho (RO). Back-end com Java, Jakarta EE e Spring Boot no ERP tributário de prefeituras na E&amp;L, criador do S.A.G.E e de sistemas web, APIs e automações de WhatsApp para empresas.">
+    <meta property="og:title" content="Carlos Charles | Desenvolvedor Java">
+    <meta property="og:description" content="Código calmo para sistemas que não podem parar. Aberto a projetos e vagas.">
+    <meta property="og:image" content="https://carloscharlesdev.cloud/foto-og.jpg">
+    <meta name="theme-color" content="#EEF1EA">
+    <link rel="canonical" href="https://carloscharlesdev.cloud/">
+    <link rel="alternate" hreflang="pt-BR" href="https://carloscharlesdev.cloud/">
+    <link rel="alternate" hreflang="en" href="https://carloscharlesdev.cloud/en/">
+    <link rel="alternate" hreflang="x-default" href="https://carloscharlesdev.cloud/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://carloscharlesdev.cloud/">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta name="twitter:card" content="summary">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Carlos Charles Batista dos Santos", "alternateName": "Carlos Charles", "jobTitle": "Desenvolvedor Java", "url": "https://carloscharlesdev.cloud/", "image": "https://carloscharlesdev.cloud/foto-og.jpg", "address": {"@type": "PostalAddress", "addressLocality": "Porto Velho", "addressRegion": "RO", "addressCountry": "BR"}, "worksFor": {"@type": "Organization", "name": "E&L Produções de Software"}, "alumniOf": {"@type": "CollegeOrUniversity", "name": "UniSapiens"}, "knowsAbout": ["Java", "Jakarta EE", "Spring Boot", "Vue.js", "PostgreSQL", "JasperReports", "APIs REST", "Linux", "Nginx"], "sameAs": ["https://www.linkedin.com/in/carlos-charles810426302", "https://github.com/CarlosCharlesdev"]}</script>
+    <link rel="icon" href="favicon-64.png" type="image/png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700&family=Silkscreen&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="logo.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        /* Define o tema antes de pintar a página (evita piscar). */
+        (function () {
+            var escolha = 'auto';
+            try { escolha = localStorage.getItem('tema') || 'auto'; } catch (e) {}
+            var h = new Date().getHours();
+            var auto = h >= 5 && h < 12 ? 'manha' : h >= 12 && h < 18 ? 'tarde' : 'noite';
+            document.documentElement.setAttribute('data-theme', escolha === 'auto' ? auto : escolha);
+        })();
+    </script>
 </head>
 <body>
-    <!-- Header/Navigation -->
-    <header id="header">
-        <nav class="container">
-            <div class="logo">
-                <span>CarlosCharles</span>.dev
+
+    <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="site-header">
+        <div class="container header-row">
+            <a href="#inicio" class="brand">
+                <svg class="mug" viewBox="0 0 10 10" width="24" height="24" aria-hidden="true"><rect class="steam" x="3" y="0" width="1" height="1"/><rect class="steam" x="5" y="1" width="1" height="1"/><rect class="steam" x="4" y="2" width="1" height="1"/><rect class="mug-body" x="1" y="3" width="6" height="6"/><rect class="coffee" x="2" y="3" width="4" height="1"/><rect class="mug-body" x="7" y="4" width="2" height="1"/><rect class="mug-body" x="8" y="5" width="1" height="2"/><rect class="mug-body" x="7" y="7" width="2" height="1"/></svg>
+                Carlos Charles
+            </a>
+            <div class="header-tools">
+                <nav aria-label="Principal">
+                    <ul class="nav">
+                        <li><a href="#trabalhos">Trabalhos</a></li>
+                        <li><a href="#caminho">Caminho</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </nav>
+                <a class="lang" href="en/" hreflang="en" lang="en">EN</a>
+                <div class="theme-switch" role="group" aria-label="Tema da página">
+                    <button type="button" data-tema="auto">auto</button>
+                    <button type="button" data-tema="manha">manhã</button>
+                    <button type="button" data-tema="tarde">tarde</button>
+                    <button type="button" data-tema="noite">noite</button>
+                </div>
             </div>
-            <ul class="nav-links">
-                <li><a href="#home">Início</a></li>
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#skills">Habilidades</a></li>
-                <li><a href="#experience">Experiência</a></li>
-                <li><a href="#projects">Projetos</a></li>
-                <li><a href="#services">Serviços</a></li>
-                <li><a href="#contact">Contato</a></li>
-            </ul>
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
-        </nav>
+        </div>
     </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero">
-            <div class="container hero-content">
-                <div class="hero-text">
-                    <h1 class="reveal">Carlos Charles</h1>
-                    <h2 class="reveal">Desenvolvedor e Analista de Sistemas | <span class="highlight">Full Stack</span></h2>
-                    <p class="reveal">Desenvolvendo soluções modernas, eficientes e escaláveis para o futuro digital.</p>
-                    <div class="hero-btns reveal">
-                        <a href="#projects" class="btn btn-primary">Ver Projetos</a>
-                        <a href="#contact" class="btn btn-secondary">Entrar em Contato</a>
-                    </div>
+    <main id="conteudo">
+        <!-- APRESENTAÇÃO -->
+        <section id="inicio" class="container hero">
+            <div class="hero-text">
+                <p class="hello">
+                    <img class="avatar" src="foto-avatar.jpg" alt="Foto de Carlos Charles" width="56" height="56">
+                    <span><span id="saudacao">Olá</span>, eu sou o Carlos.</span>
+                </p>
+                <h1>Código calmo para sistemas que não podem parar.</h1>
+                <p class="lead">Desenvolvedor Java com foco em back-end, em Porto Velho. Na E&amp;L Produções de Software, evoluo o ERP de gestão tributária usado por prefeituras. Para empresas, construo sistemas web, APIs e automações de WhatsApp sem complicação.</p>
+                <div class="paths">
+                    <a class="path card" href="#contato">
+                        <span class="path-who">Tenho um projeto</span>
+                        <span class="path-go">Pedir um orçamento</span>
+                    </a>
+                    <a class="path card" href="#caminho">
+                        <span class="path-who">Estou contratando</span>
+                        <span class="path-go">Ver experiência e currículo</span>
+                    </a>
                 </div>
-                  <div class="hero-image reveal">
-                      <div class="image-container">
-                          <img src="foto-prncipal.jpeg" alt="Carlos Charles">
-                      </div>
-                  </div>
+                <ul class="proofs" aria-label="Destaques">
+                    <li><strong>S.A.G.E</strong> em produção, com cliente ativo</li>
+                    <li><strong>2º lugar</strong> no Béra Hackathon 2025</li>
+                    <li><strong>Sênior</strong> na E&amp;L Software</li>
+                </ul>
             </div>
+            <figure class="hero-scene">
+                <div class="scene card card-lg">
+                    <img class="scene-img scene-manha" src="pixel/manha.svg" alt="Pixel art de manhã: notebook com código, caneca de café e janela com sol" width="384" height="288">
+                    <img class="scene-img scene-tarde" src="pixel/tarde.svg" alt="Pixel art à tarde: notebook com código, caneca de café e janela com pôr do sol" width="384" height="288">
+                    <img class="scene-img scene-noite" src="pixel/noite.svg" alt="Pixel art à noite: notebook com código, caneca de café e janela com lua e estrelas" width="384" height="288">
+                </div>
+                <figcaption><span class="status-dot" aria-hidden="true"></span><span id="legenda">Aberto a projetos freelance e conversas sobre vagas.</span></figcaption>
+            </figure>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="section">
-            <div class="container">
-                <h2 class="section-title">Sobre Mim</h2>
-                <div class="about-grid">
-                    <div class="about-text">
-                        <p>Profissional focado em desenvolvimento de sistemas, com sólida experiência em criar soluções reais para desafios complexos. Atuo com <strong>Java</strong>, <strong>Spring Boot</strong> e ecossistemas modernos de desenvolvimento.</p>
-                        <p>Busco evolução constante, aplicando as melhores práticas de engenharia de software para entregar sistemas eficientes, seguros e de alta performance. Atualmente, curso Sistemas de Informação na Unisapiens (2023-2026), unindo teoria acadêmica com prática de mercado.</p>
-                    </div>
-                    <div class="about-info">
-                        <div class="info-item">
-                            <span class="label">Localização:</span>
-                            <span class="value">Rondônia, Brasil</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="label">Formação:</span>
-                            <span class="value">Sistemas de Informação (Cursando)</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="label">Foco:</span>
-                            <span class="value">Java / Full Stack / Backend</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="section bg-alt">
-            <div class="container">
-                <h2 class="section-title">Habilidades Técnicas</h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3><i class="fas fa-server"></i> Backend</h3>
-                        <div class="skill-tags">
-                            <span>Java</span>
-                            <span>Spring Boot</span>
-                            <span>Node.js</span>
-                            <span>WildFly</span>
-                            <span>GWT</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
-                        <div class="skill-tags">
-                            <span>JavaScript</span>
-                            <span>Vue.js</span>
-                            <span>HTML5 / CSS3</span>
-                            <span>TailwindCSS</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3><i class="fas fa-database"></i> Outros</h3>
-                        <div class="skill-tags">
-                            <span>PostgreSQL</span>
-                            <span>MySQL</span>
-                            <span>Git / GitHub</span>
-                            <span>Integração WhatsApp</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience" class="section">
-            <div class="container">
-                <h2 class="section-title">Experiência Profissional</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">2026 - Presente</div>
-                        <div class="timeline-content">
-                            <h3>Auxiliar de Programação Sênior</h3>
-                            <h4>E&L Produções de Software</h4>
-                            <p>Desenvolvimento de soluções tributárias para prefeituras, manutenção de sistemas críticos e evolução tecnológica de plataformas legadas.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">2025 - 2026</div>
-                        <div class="timeline-content">
-                            <h3>Auxiliar de Programação Júnior</h3>
-                            <h4>E&L Produções de Software</h4>
-                            <p>Suporte e atendimento a clientes, manutenção de sistemas e auxílio no desenvolvimento de novas funcionalidades.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">2024 - 2025</div>
-                        <div class="timeline-content">
-                            <h3>Estagiário Analista de Sistemas</h3>
-                            <h4>Tribunal de Justiça de Rondônia</h4>
-                            <p>Análise e desenvolvimento de soluções para sistemas judiciais, com foco em módulos de Gabinete e Sessão.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-<!-- Projects Section -->
-<section id="projects" class="section bg-alt">
-    <div class="container">
-        <h2 class="section-title">Projetos em Destaque</h2>
-        <div class="projects-grid">
-
-            <div class="project-card">
-                <div class="project-img">
-                    <img src="image1.png" alt="Mini ERP">
-                </div>
-                <div class="project-info">
-                    <h3>Mini-ERP com WhatsApp</h3>
-                    <p>Sistema de gestão empresarial integrado com API do WhatsApp para notificações automáticas e atendimento.</p>
-                    <div class="project-tags">
-                        <span>Java</span>
-                        <span>Spring Boot</span>
-                        <span>WhatsApp API</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-img">
-                    <img src="image2.png" alt="Controle de Estoque">
-                </div>
-                <div class="project-info">
-                    <h3>Controle de Estoque</h3>
-                    <p>Aplicação completa para gestão de inventário, entradas, saídas e relatórios analíticos em tempo real.</p>
-                    <div class="project-tags">
-                        <span>Vue.js</span>
-                        <span>Node.js</span>
-                        <span>PostgreSQL</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-img">
-                    <img src="image.png" alt="API Spring Boot">
-                </div>
-                <div class="project-info">
-                    <h3>REST API Spring Boot</h3>
-                    <p>API robusta e documentada para integração de sistemas financeiros com alta segurança e performance.</p>
-                    <div class="project-tags">
-                        <span>Java</span>
-                        <span>Spring Boot</span>
-                        <span>MySQL</span>
-                    </div>
-                </div>
-            </div>
-
+        <div class="stack-band">
+            <ul class="container" aria-label="Tecnologias principais">
+                <li>Java 21</li><li>Jakarta EE</li><li>Spring Boot</li><li>Vue.js</li><li>PostgreSQL</li><li>JasperReports</li><li>Linux e Nginx</li><li>Git</li>
+            </ul>
         </div>
-    </div>
-</section>
 
-        <!-- Services Section -->
-        <section id="services" class="section">
-            <div class="container">
-                <h2 class="section-title">Serviços</h2>
-                <div class="services-grid">
-                    <div class="service-item">
-                        <i class="fas fa-code"></i>
-                        <h3>Sistemas Web</h3>
-                        <p>Desenvolvimento de sistemas personalizados e escaláveis para o seu negócio.</p>
+        <!-- PROJETOS E SKILLS -->
+        <section id="trabalhos" class="container section">
+            <h2>Trabalhos selecionados</h2>
+            <p class="section-lead">Dois sistemas que eu mesmo construí e mantenho em produção: um ERP que roda todo dia num restaurante e uma plataforma de atendimento com IA.</p>
+
+            <div class="projects">
+                <article class="project">
+                    <div class="project-img card"><img src="sage.jpg" alt="Tela de Ficha técnica do S.A.G.E, com custo, preço de venda, lucro e CMV de cada lanche" loading="lazy" width="1520" height="950"></div>
+                    <div class="project-body">
+                        <p class="badge"><span class="status-dot" aria-hidden="true"></span>Em produção, com cliente ativo</p>
+                        <h3>S.A.G.E</h3>
+                        <p class="project-sub">ERP de pedidos, estoque e gestão</p>
+                        <p class="muted">Sistema Administrativo de Gestão Empresarial, feito para restaurantes. No fechamento do dia, a equipe informa a sobra; o S.A.G.E calcula quanto pedir de cada item e envia o pedido para cada fornecedor pelo WhatsApp da própria empresa. Os relatórios saem em PDF no sistema ou direto no WhatsApp, para quem tem permissão de pedir.</p>
+                        <figure class="quote">
+                            <blockquote>“Isso aqui não é somente uma automação, é confiança: os dados estão seguros, é rápido e até uma criança consegue usar o sistema.”</blockquote>
+                            <figcaption>Dono da hamburgueria que usa o S.A.G.E, Pimenta Bueno (RO)</figcaption>
+                        </figure>
+                        <ul class="pixel-list project-points">
+                            <li>Pedido de compra automático pelo WhatsApp, com regra por item: tabela semanal, estoque mínimo e máximo ou receita por faixa de produção</li>
+                            <li>Estoque com recebimento, entradas, saídas, descartes e fechamento semanal ou mensal</li>
+                            <li>Gestão de custos: ficha técnica com custo, CMV e margem de cada lanche</li>
+                            <li>Relatórios JasperReports de pedidos, estoque e indicadores, emitidos no sistema ou pelo WhatsApp</li>
+                            <li>Multiempresa, com o ciclo todo feito por mim: modelagem, API REST, interface e deploy em VPS Linux com Nginx e HTTPS</li>
+                        </ul>
+                        <dl class="meta">
+                            <dt>Para quem</dt><dd>Restaurantes e pequenos negócios de alimentação. Em uso diário numa hamburgueria em Pimenta Bueno, RO</dd>
+                            <dt>Feito com</dt><dd>Vue.js 3, Spring Boot, PostgreSQL, JasperReports, integração com WhatsApp</dd>
+                        </dl>
+                        <a class="btn-demo" href="https://wa.me/5569992700080?text=Oi%20Carlos%21%20Vi%20o%20S.A.G.E%20no%20seu%20portf%C3%B3lio%20e%20quero%20uma%20demonstra%C3%A7%C3%A3o." target="_blank" rel="noopener">Pedir uma demonstração</a>
                     </div>
-                    <div class="service-item">
-                        <i class="fas fa-plug"></i>
-                        <h3>APIs e Integrações</h3>
-                        <p>Criação de APIs robustas com Java Spring Boot e integrações de terceiros.</p>
+                </article>
+
+                <article class="project reverse">
+                    <div class="project-img card chat-mock" role="img" aria-label="Exemplo ilustrativo de uma conversa de atendimento automático">
+                        <p class="chat-bar"><span class="status-dot" aria-hidden="true"></span>Atendimento da loja</p>
+                        <p class="msg in">Oi! Tem pão brioche pra hambúrguer?</p>
+                        <p class="msg out">Tem sim! Confirmei no estoque agora. Quantos pacotes você quer?</p>
+                        <p class="msg in">Manda 3, por favor.</p>
+                        <p class="msg out">Pedido anotado: 3 pacotes de pão brioche. Te aviso quando sair para entrega.</p>
+                        <p class="chat-note">Exemplo ilustrativo</p>
                     </div>
-                    <div class="service-item">
-                        <i class="fas fa-mobile-screen"></i>
-                        <h3>Sites Institucionais</h3>
-                        <p>Websites modernos, rápidos e totalmente responsivos para sua empresa.</p>
+                    <div class="project-body">
+                        <p class="badge"><span class="status-dot" aria-hidden="true"></span>Em produção</p>
+                        <h3>Atendimento com IA</h3>
+                        <p class="project-sub">Plataforma multiempresa de atendimento automático</p>
+                        <p class="muted">Um assistente que responde os clientes pela mensageria: consulta o catálogo, confere o estoque e registra pedidos, sempre com o banco de dados como fonte da verdade. A IA roda num servidor próprio, sem custo por mensagem e sem mandar os dados para fora.</p>
+                        <ul class="pixel-list project-points">
+                            <li>Uma instalação atende várias empresas, cada uma com catálogo e configurações isolados</li>
+                            <li>Painel administrativo com senha protegida por bcrypt e sessão que expira sozinha</li>
+                            <li>Proteção contra manipulação da IA (prompt injection) com filtros e validação da resposta</li>
+                        </ul>
+                        <dl class="meta">
+                            <dt>Para quem</dt><dd>Negócios que atendem e vendem pelo WhatsApp</dd>
+                            <dt>Feito com</dt><dd>Node.js, PostgreSQL, LLM local (Ollama), APIs REST</dd>
+                        </dl>
+                        <a class="btn-demo" href="https://wa.me/5569992700080?text=Oi%20Carlos%21%20Vi%20o%20atendimento%20com%20IA%20no%20seu%20portf%C3%B3lio%20e%20quero%20uma%20demonstra%C3%A7%C3%A3o." target="_blank" rel="noopener">Pedir uma demonstração</a>
                     </div>
-                    <div class="service-item">
-                        <i class="fab fa-whatsapp"></i>
-                        <h3>Automação WhatsApp</h3>
-                        <p>Integração de sistemas com WhatsApp para automação de processos.</p>
-                    </div>
+                </article>
+                
+            </div>
+
+            <div class="duo">
+                <div class="card services">
+                    <h3>Posso fazer por você</h3>
+                    <ul class="pixel-list">
+                        <li>Sistemas web sob medida para o seu processo</li>
+                        <li>APIs e integrações entre sistemas</li>
+                        <li>Sites institucionais rápidos e fáceis de atualizar</li>
+                        <li>Avisos e atendimento automáticos no WhatsApp</li>
+                    </ul>
+                </div>
+                <div class="card skills">
+                    <h3>Com o que eu trabalho</h3>
+                    <dl>
+                        <div><dt>Back-end</dt><dd>Java 8 a 21, Jakarta EE / Java EE (EJB, JPA/Hibernate), Spring Boot, WildFly, Node.js, APIs REST</dd></div>
+                        <div><dt>Front-end</dt><dd>Vue.js 3, Vite, GWT, JavaScript, HTML e CSS, Tailwind CSS, Bootstrap</dd></div>
+                        <div><dt>Dados</dt><dd>PostgreSQL (modelagem e otimização), MySQL, MongoDB, JasperReports</dd></div>
+                        <div><dt>Infra</dt><dd>Linux, VPS, Nginx, HTTPS com Certbot, Git e GitLab, Maven</dd></div>
+                        <div><dt>IA e integrações</dt><dd>LLM local com Ollama, OpenAI API, integração com WhatsApp, arquitetura multiempresa</dd></div>
+                    </dl>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="section bg-alt">
-            <div class="container">
-                <h2 class="section-title">Contato</h2>
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <h3>Vamos conversar?</h3>
-                        <p>Estou disponível para novos projetos, parcerias ou oportunidades profissionais.</p>
-                        <div class="contact-methods">
-                            <a href="https://wa.me/5569992700080" target="_blank" class="contact-link">
-                                <i class="fab fa-whatsapp"></i> (69) 99270-0080
-                            </a>
-                            <a href="mailto:carloscharles1616@gmail.com" class="contact-link">
-                                <i class="far fa-envelope"></i> carloscharles1616@gmail.com
-                            </a>
-                        </div>
-                        <div class="social-links">
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
-                            <a href="#"><i class="fab fa-github"></i></a>
-                        </div>
+        <!-- JORNADA -->
+        <section id="caminho" class="container section">
+            <h2>O caminho até aqui</h2>
+            <p class="section-lead">Do estágio no Tribunal de Justiça de Rondônia ao ERP tributário que roda em prefeituras.</p>
+
+            <article class="award card">
+                <figure class="award-photo">
+                    <img src="equipe-hackathon.jpg" alt="Carlos e a equipe segurando a placa de 2º lugar no Béra Hackathon" width="480" height="480" loading="lazy">
+                </figure>
+                <div class="award-text">
+                    <p class="badge"><span class="trophy" aria-hidden="true"></span>Porto Velho, 2025</p>
+                    <h3>2º lugar no Béra Hackathon</h3>
+                    <p>Em 48 horas, nossa equipe criou um sistema para agendar consultas nas unidades básicas de saúde pela mensageria, aceitando mensagens de áudio para facilitar a vida dos idosos. Fomos a única equipe universitária no pódio, a 0,3 ponto do primeiro lugar.</p>
+                    <dl class="meta">
+                        <dt>Feito com</dt><dd>Python, Node.js, Next.js, OpenAI API</dd>
+                    </dl>
+                </div>
+            </article>
+
+            <ol class="journey">
+                <li class="card job">
+                    <div class="job-head">
+                        <span class="when"><span class="mark mark-primary"></span>jan/2026 – hoje</span>
+                        <strong>Auxiliar de Programação Sênior</strong>
+                        <span class="muted">E&amp;L Produções de Software</span>
                     </div>
+                    <ul class="pixel-list job-points">
+                        <li>Evoluo o GPI, ERP de gestão pública integrada usado por prefeituras, nos módulos tributários: ITBI, dívida ativa e integração com a Junta Comercial</li>
+                        <li>Participei da migração do Java 8 para o Java 21 (javax para jakarta) num sistema com vários módulos em EJB, WildFly e GWT</li>
+                        <li>Diagnostico e corrijo problemas em produção, do log do servidor até o ajuste no código e no banco</li>
+                    </ul>
+                </li>
+                <li class="card job">
+                    <div class="job-head">
+                        <span class="when"><span class="mark mark-accent"></span>2026</span>
+                        <strong>Cursos de segurança da informação</strong>
+                        <span class="muted">Escola Superior de Redes, RNP</span>
+                    </div>
+                    <ul class="pixel-list job-points">
+                        <li>Aprovado em CTF Aplicativo Web e Análise de Malware Básica</li>
+                    </ul>
+                </li>
+                <li class="card job">
+                    <div class="job-head">
+                        <span class="when"><span class="mark"></span>jan/2025 – jan/2026</span>
+                        <strong>Auxiliar de Programação Júnior</strong>
+                        <span class="muted">E&amp;L Produções de Software</span>
+                    </div>
+                    <ul class="pixel-list job-points">
+                        <li>Novas funcionalidades e manutenção com Java EE (EJB, JPA/Hibernate), GWT e PostgreSQL</li>
+                        <li>Suporte direto às prefeituras: entender o problema de quem usa antes de mexer no código</li>
+                        <li>Build e dependências com Maven, código versionado em Git</li>
+                    </ul>
+                </li>
+                <li class="card job">
+                    <div class="job-head">
+                        <span class="when"><span class="mark"></span>2024 – 2025</span>
+                        <strong>Estagiário Analista de Sistemas</strong>
+                        <span class="muted">Tribunal de Justiça de Rondônia</span>
+                    </div>
+                    <ul class="pixel-list job-points">
+                        <li>Sistemas judiciais de uso interno: gabinete e sessões de julgamento</li>
+                        <li>Análise de requisitos num ambiente de alta criticidade e primeiro contato com Java corporativo em produção</li>
+                    </ul>
+                </li>
+                <li class="card job">
+                    <div class="job-head">
+                        <span class="when"><span class="mark"></span>2023 – 2026</span>
+                        <strong>Bacharelado em Sistemas de Informação</strong>
+                        <span class="muted">UniSapiens, conclusão prevista para 2026</span>
+                    </div>
+                </li>
+            </ol>
+
+            <div class="certs">
+                <h3>Certificados e eventos</h3>
+                <ul>
+                    <li><strong>CTF Aplicativo Web</strong><span>ESR, RNP, 2026</span></li>
+                    <li><strong>Análise de Malware Básica</strong><span>ESR, RNP, 2026</span></li>
+                    <li><strong>Build with AI: 1º Hackathon Cidade Sustentável</strong><span>GDG Porto Velho, 2026</span></li>
+                    <li><strong>3ª Conexão Tech. RO</strong><span>Governo de Rondônia, 2026</span></li>
+                    <li><strong>Sebrae Supernova, 1ª temporada</strong><span>Sebrae, 2026</span></li>
+                    <li><strong>I Rondônia Startup Connect</strong><span>Startup Connect RO, 2026</span></li>
+                    <li><strong>Desafio Liga Jovem: conclusão e etapa estadual</strong><span>Sebrae, 2025</span></li>
+                    <li><strong>Experiência TONNIE: Java and AI in Europe</strong><span>DIO, 2025</span></li>
+                    <li><strong>11º Encontro da comunidade PyRO</strong><span>Python Rondônia, 2024</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- CONTATO -->
+        <section id="contato" class="container section contact-wrap">
+            <div class="contact">
+                <div class="contact-text">
+                    <h2>Passa um café e me conta a ideia.</h2>
+                    <p>Projeto para o seu negócio, vaga no seu time ou só uma dúvida técnica. Respondo no mesmo dia.</p>
+                    <div class="contact-actions">
+                        <a class="btn btn-primary" href="https://wa.me/5569992700080" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+                        <a class="btn btn-ghost" href="curriculo.pdf" download>Baixar currículo (PDF)</a>
+                    </div>
+                    <ul class="contact-links">
+                        <li><a href="mailto:carloscharles1616@gmail.com">carloscharles1616@gmail.com</a></li>
+                        <li><a href="https://www.linkedin.com/in/carlos-charles810426302" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><a href="https://github.com/CarlosCharlesdev" target="_blank" rel="noopener">GitHub</a></li>
+                    </ul>
+                </div>
+                <div class="contact-mug" aria-hidden="true">
+                    <svg class="mug" viewBox="0 0 10 10" width="64" height="64"><rect class="steam" x="3" y="0" width="1" height="1"/><rect class="steam" x="5" y="1" width="1" height="1"/><rect class="steam" x="4" y="2" width="1" height="1"/><rect class="mug-body" x="1" y="3" width="6" height="6"/><rect class="coffee" x="2" y="3" width="4" height="1"/><rect class="mug-body" x="7" y="4" width="2" height="1"/><rect class="mug-body" x="8" y="5" width="1" height="2"/><rect class="mug-body" x="7" y="7" width="2" height="1"/><rect class="saucer" x="1" y="9" width="6" height="1"/></svg>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Carlos Charles. Todos os direitos reservados.</p>
-        </div>
+    <footer class="container site-footer">
+        <p>© <span id="ano">2026</span> Carlos Charles. Feito em Porto Velho, com bastante café.</p>
+        <a href="#inicio">Voltar ao topo</a>
     </footer>
 
     <script src="script.js"></script>
