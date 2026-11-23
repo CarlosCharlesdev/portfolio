@@ -56,6 +56,7 @@
                     </ul>
                 </nav>
                 <a class="lang" href="../" hreflang="pt-BR" lang="pt-BR">PT</a>
+                <button type="button" class="theme-cycle" aria-label="Change page theme"><span class="tc-dot" aria-hidden="true"></span><span id="tema-rotulo">auto</span></button>
                 <div class="theme-switch" role="group" aria-label="Page theme">
                     <button type="button" data-tema="auto">auto</button>
                     <button type="button" data-tema="manha">morning</button>
@@ -125,6 +126,8 @@
                             <blockquote>“This isn't just automation, it's trust: the data is safe, it's fast, and even a child can use the system.”</blockquote>
                             <figcaption>Owner of the burger restaurant that runs S.A.G.E, Pimenta Bueno, Brazil (translated from Portuguese)</figcaption>
                         </figure>
+                        <details class="more" open>
+                            <summary>See project details</summary>
                         <ul class="pixel-list project-points">
                             <li>Automatic purchase orders over WhatsApp, with a rule per item: weekly table, minimum and maximum stock, or recipe by production range</li>
                             <li>Inventory with receiving, stock in and out, waste tracking and weekly or monthly stock counts</li>
@@ -136,6 +139,7 @@
                             <dt>Built for</dt><dd>Restaurants and small food businesses. In daily use at a burger restaurant in Pimenta Bueno, Brazil</dd>
                             <dt>Built with</dt><dd>Vue.js 3, Spring Boot, PostgreSQL, JasperReports, WhatsApp integration</dd>
                         </dl>
+                        </details>
                         <a class="btn-demo" href="https://wa.me/5569992700080?text=Hi%20Carlos%21%20I%20saw%20S.A.G.E%20on%20your%20portfolio%20and%20I%27d%20like%20a%20demo." target="_blank" rel="noopener">Request a demo</a>
                     </div>
                 </article>
@@ -154,6 +158,8 @@
                         <h3>AI customer service</h3>
                         <p class="project-sub">Multi-tenant automated customer service platform</p>
                         <p class="muted">An assistant that answers customers over messaging: it looks up the catalog, checks stock and records orders, always with the database as the single source of truth. The AI runs on our own server, with no per-message cost and no data sent outside.</p>
+                        <details class="more" open>
+                            <summary>See project details</summary>
                         <ul class="pixel-list project-points">
                             <li>One installation serves several businesses, each with its own isolated catalog and settings</li>
                             <li>Admin panel with bcrypt-hashed passwords and sessions that expire on their own</li>
@@ -163,6 +169,7 @@
                             <dt>Built for</dt><dd>Businesses that serve and sell over WhatsApp</dd>
                             <dt>Built with</dt><dd>Node.js, PostgreSQL, local LLM (Ollama), REST APIs</dd>
                         </dl>
+                        </details>
                         <a class="btn-demo" href="https://wa.me/5569992700080?text=Hi%20Carlos%21%20I%20saw%20the%20AI%20customer%20service%20platform%20on%20your%20portfolio%20and%20I%27d%20like%20a%20demo." target="_blank" rel="noopener">Request a demo</a>
                     </div>
                 </article>
@@ -303,6 +310,12 @@
             </div>
         </section>
     </main>
+
+    <nav class="bottom-bar" aria-label="Shortcuts">
+        <a href="#trabalhos">Work</a>
+        <a href="#caminho">Experience</a>
+        <a class="bb-cta" href="https://wa.me/5569992700080" target="_blank" rel="noopener">WhatsApp</a>
+    </nav>
 
     <footer class="container site-footer">
         <p>© <span id="ano">2026</span> Carlos Charles. Made in Porto Velho, with plenty of coffee.</p>

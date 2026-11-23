@@ -40,7 +40,19 @@
         if (legenda) legenda.textContent = textos[tema].legenda;
         if (themeColor) themeColor.setAttribute('content', cores[tema]);
         botoes.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.tema === escolha)));
+        if (rotulo) rotulo.textContent = nomes[escolha] || escolha;
     };
+
+    // Celular: um botão só, que passa por auto → manhã → tarde → noite.
+    const ordem = ['auto', 'manha', 'tarde', 'noite'];
+    const nomes = en ? { auto: 'auto', manha: 'morning', tarde: 'afternoon', noite: 'night' }
+                     : { auto: 'auto', manha: 'manhã', tarde: 'tarde', noite: 'noite' };
+    const ciclo = document.querySelector('.theme-cycle');
+    const rotulo = document.getElementById('tema-rotulo');
+    if (ciclo) ciclo.addEventListener('click', () => {
+        salvarEscolha(ordem[(ordem.indexOf(lerEscolha()) + 1) % ordem.length]);
+        aplicar();
+    });
 
     botoes.forEach((b) => b.addEventListener('click', () => {
         salvarEscolha(b.dataset.tema);
@@ -50,6 +62,11 @@
     aplicar();
     // Confere o horário a cada minuto: se alguém estiver na página às 18h, ela vira noite sozinha.
     setInterval(aplicar, 60 * 1000);
+
+    // No celular os detalhes técnicos dos projetos começam fechados, para a página ficar curta.
+    if (window.matchMedia('(max-width: 640px)').matches) {
+        document.querySelectorAll('details.more').forEach((d) => { d.open = false; });
+    }
 
     const ano = document.getElementById('ano');
     if (ano) ano.textContent = new Date().getFullYear();

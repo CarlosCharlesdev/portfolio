@@ -56,6 +56,7 @@
                     </ul>
                 </nav>
                 <a class="lang" href="en/" hreflang="en" lang="en">EN</a>
+                <button type="button" class="theme-cycle" aria-label="Trocar tema da página"><span class="tc-dot" aria-hidden="true"></span><span id="tema-rotulo">auto</span></button>
                 <div class="theme-switch" role="group" aria-label="Tema da página">
                     <button type="button" data-tema="auto">auto</button>
                     <button type="button" data-tema="manha">manhã</button>
@@ -125,6 +126,8 @@
                             <blockquote>“Isso aqui não é somente uma automação, é confiança: os dados estão seguros, é rápido e até uma criança consegue usar o sistema.”</blockquote>
                             <figcaption>Dono da hamburgueria que usa o S.A.G.E, Pimenta Bueno (RO)</figcaption>
                         </figure>
+                        <details class="more" open>
+                            <summary>Ver detalhes do projeto</summary>
                         <ul class="pixel-list project-points">
                             <li>Pedido de compra automático pelo WhatsApp, com regra por item: tabela semanal, estoque mínimo e máximo ou receita por faixa de produção</li>
                             <li>Estoque com recebimento, entradas, saídas, descartes e fechamento semanal ou mensal</li>
@@ -136,6 +139,7 @@
                             <dt>Para quem</dt><dd>Restaurantes e pequenos negócios de alimentação. Em uso diário numa hamburgueria em Pimenta Bueno, RO</dd>
                             <dt>Feito com</dt><dd>Vue.js 3, Spring Boot, PostgreSQL, JasperReports, integração com WhatsApp</dd>
                         </dl>
+                        </details>
                         <a class="btn-demo" href="https://wa.me/5569992700080?text=Oi%20Carlos%21%20Vi%20o%20S.A.G.E%20no%20seu%20portf%C3%B3lio%20e%20quero%20uma%20demonstra%C3%A7%C3%A3o." target="_blank" rel="noopener">Pedir uma demonstração</a>
                     </div>
                 </article>
@@ -154,6 +158,8 @@
                         <h3>Atendimento com IA</h3>
                         <p class="project-sub">Plataforma multiempresa de atendimento automático</p>
                         <p class="muted">Um assistente que responde os clientes pela mensageria: consulta o catálogo, confere o estoque e registra pedidos, sempre com o banco de dados como fonte da verdade. A IA roda num servidor próprio, sem custo por mensagem e sem mandar os dados para fora.</p>
+                        <details class="more" open>
+                            <summary>Ver detalhes do projeto</summary>
                         <ul class="pixel-list project-points">
                             <li>Uma instalação atende várias empresas, cada uma com catálogo e configurações isolados</li>
                             <li>Painel administrativo com senha protegida por bcrypt e sessão que expira sozinha</li>
@@ -163,6 +169,7 @@
                             <dt>Para quem</dt><dd>Negócios que atendem e vendem pelo WhatsApp</dd>
                             <dt>Feito com</dt><dd>Node.js, PostgreSQL, LLM local (Ollama), APIs REST</dd>
                         </dl>
+                        </details>
                         <a class="btn-demo" href="https://wa.me/5569992700080?text=Oi%20Carlos%21%20Vi%20o%20atendimento%20com%20IA%20no%20seu%20portf%C3%B3lio%20e%20quero%20uma%20demonstra%C3%A7%C3%A3o." target="_blank" rel="noopener">Pedir uma demonstração</a>
                     </div>
                 </article>
@@ -304,6 +311,12 @@
             </div>
         </section>
     </main>
+
+    <nav class="bottom-bar" aria-label="Atalhos">
+        <a href="#trabalhos">Projetos</a>
+        <a href="#caminho">Caminho</a>
+        <a class="bb-cta" href="https://wa.me/5569992700080" target="_blank" rel="noopener">WhatsApp</a>
+    </nav>
 
     <footer class="container site-footer">
         <p>© <span id="ano">2026</span> Carlos Charles. Feito em Porto Velho, com bastante café.</p>
