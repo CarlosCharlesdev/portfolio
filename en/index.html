@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carlos Charles | Java Developer · Spring Boot · Vue.js</title>
-    <meta name="description" content="Carlos Charles, Java developer in Porto Velho, Brazil. Back end with Java, Jakarta EE and Spring Boot on a tax ERP used by city governments at E&amp;L, creator of S.A.G.E, and builder of web systems, APIs and WhatsApp automations for businesses.">
-    <meta property="og:title" content="Carlos Charles | Java Developer">
+    <title>Carlos Charles | Software Developer · Infrastructure and Security</title>
+    <meta name="description" content="Carlos Charles, software developer in Porto Velho, Brazil: Java and Spring Boot back end, Linux infrastructure with Docker and Nginx, and security. Works on a tax ERP used by city governments at E&amp;L and built S.A.G.E, an ERP running in production for restaurants.">
+    <meta property="og:title" content="Carlos Charles | Software Developer · Infrastructure and Security">
     <meta property="og:description" content="Calm code for systems that can't stop. Open to projects and job opportunities.">
     <meta property="og:image" content="https://carloscharlesdev.cloud/foto-og.jpg">
     <meta name="theme-color" content="#EEF1EA">
@@ -18,14 +18,14 @@
     <meta property="og:locale" content="en_US">
     <meta property="og:locale:alternate" content="pt_BR">
     <meta name="twitter:card" content="summary">
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Carlos Charles Batista dos Santos", "alternateName": "Carlos Charles", "jobTitle": "Java Developer", "url": "https://carloscharlesdev.cloud/en/", "image": "https://carloscharlesdev.cloud/foto-og.jpg", "address": {"@type": "PostalAddress", "addressLocality": "Porto Velho", "addressRegion": "RO", "addressCountry": "BR"}, "worksFor": {"@type": "Organization", "name": "E&L Produções de Software"}, "alumniOf": {"@type": "CollegeOrUniversity", "name": "UniSapiens"}, "knowsAbout": ["Java", "Jakarta EE", "Spring Boot", "Vue.js", "PostgreSQL", "JasperReports", "REST APIs", "Linux", "Nginx"], "sameAs": ["https://www.linkedin.com/in/carlos-charles-810426302", "https://github.com/CarlosCharlesdev"]}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Carlos Charles Batista dos Santos", "alternateName": "Carlos Charles", "jobTitle": "Software Developer, Infrastructure and Security", "url": "https://carloscharlesdev.cloud/en/", "image": "https://carloscharlesdev.cloud/foto-og.jpg", "address": {"@type": "PostalAddress", "addressLocality": "Porto Velho", "addressRegion": "RO", "addressCountry": "BR"}, "worksFor": {"@type": "Organization", "name": "E&L Produções de Software"}, "alumniOf": {"@type": "CollegeOrUniversity", "name": "UniSapiens"}, "knowsAbout": ["Java", "Spring Boot", "Jakarta EE", "Vue.js", "PostgreSQL", "Linux", "Docker", "Nginx", "DevOps", "Information security", "AWS"], "sameAs": ["https://www.linkedin.com/in/carlos-charles-810426302", "https://github.com/CarlosCharlesdev"]}</script>
     <link rel="icon" href="../favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../favicon-64.png" type="image/png">
     <link rel="apple-touch-icon" href="../apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700&family=Silkscreen&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../style.css?v=20261123d">
+    <link rel="stylesheet" href="../style.css?v=20261123e">
     <script>
         /* Sets the theme before the page paints (avoids a flash). */
         (function () {
@@ -76,7 +76,7 @@
                     <span><span id="saudacao">Hello</span>, I'm Carlos.</span>
                 </p>
                 <h1>Calm code for systems that can't stop.</h1>
-                <p class="lead">Java developer focused on back end, based in Porto Velho, Brazil. At E&amp;L Produções de Software, I work on the tax management ERP used by city governments. For businesses, I build web systems, APIs and WhatsApp automations without the hassle.</p>
+                <p class="lead">Software developer based in Porto Velho, Brazil, from code to server: Java back end, Linux infrastructure and security from the very first deploy. At E&amp;L Produções de Software, I work on the tax ERP used by city governments. For businesses, I build and ship web systems, APIs and WhatsApp automations.</p>
                 <div class="paths">
                     <a class="path card" href="#contato">
                         <span class="path-who">I have a project</span>
@@ -105,7 +105,7 @@
 
         <div class="stack-band">
             <ul class="container" aria-label="Main technologies">
-                <li>Java 21</li><li>Jakarta EE</li><li>Spring Boot</li><li>Vue.js</li><li>PostgreSQL</li><li>JasperReports</li><li>Linux and Nginx</li><li>Git</li>
+                <li>Java 21</li><li>Spring Boot</li><li>Vue.js</li><li>PostgreSQL</li><li>Linux</li><li>Docker</li><li>Nginx</li><li>Security</li>
             
                 <li class="dup" aria-hidden="true">Java 21</li><li class="dup" aria-hidden="true">Jakarta EE</li><li class="dup" aria-hidden="true">Spring Boot</li><li class="dup" aria-hidden="true">Vue.js</li><li class="dup" aria-hidden="true">PostgreSQL</li><li class="dup" aria-hidden="true">JasperReports</li><li class="dup" aria-hidden="true">Linux and Nginx</li><li class="dup" aria-hidden="true">Git</li>
             </ul>
@@ -135,11 +135,12 @@
                             <li>Inventory with receiving, stock in and out, waste tracking and weekly or monthly stock counts</li>
                             <li>Cost management: recipe costing with cost, food cost percentage and margin for each menu item</li>
                             <li>JasperReports reports on orders, inventory and KPIs, issued in the system or over WhatsApp</li>
-                            <li>Multi-tenant, and I built the whole cycle: data modeling, REST API, interface and deployment on a Linux VPS with Nginx and HTTPS</li>
+                            <li>Multi-tenant, and I built the whole cycle: data modeling, REST API, interface and infrastructure</li>
+                            <li>Infrastructure on a Linux VPS: Docker Compose with automatic restarts, the back end as a systemd service that comes back on its own in under a minute after a server reboot, Nginx with HTTPS, scripted deploys, pg_dump backups and credentials kept out of the code</li>
                         </ul>
                         <dl class="meta">
                             <dt>Built for</dt><dd>Restaurants and small food businesses. In daily use at a burger restaurant in Pimenta Bueno, Brazil</dd>
-                            <dt>Built with</dt><dd>Vue.js 3, Spring Boot, PostgreSQL, JasperReports, WhatsApp integration</dd>
+                            <dt>Built with</dt><dd>Vue.js 3, Spring Boot, PostgreSQL, JasperReports, Docker, Nginx, WhatsApp integration</dd>
                         </dl>
                         </details>
                         <a class="btn-demo" href="https://wa.me/5569992700080?text=Hi%20Carlos%21%20I%20saw%20S.A.G.E%20on%20your%20portfolio%20and%20I%27d%20like%20a%20demo." target="_blank" rel="noopener">Request a demo</a>
@@ -184,16 +185,18 @@
                         <li>Custom web systems shaped around your process</li>
                         <li>APIs and integrations between systems</li>
                         <li>Fast business websites that are easy to update</li>
+                        <li>Your system live and secure: Linux server, HTTPS, backups and automatic restarts</li>
                         <li>Automatic notifications and customer service on WhatsApp</li>
                     </ul>
                 </div>
                 <div class="card skills">
                     <h3>What I work with</h3>
                     <dl>
-                        <div><dt>Back end</dt><dd>Java 8 to 21, Jakarta EE / Java EE (EJB, JPA/Hibernate), Spring Boot, WildFly, Node.js, REST APIs</dd></div>
-                        <div><dt>Front end</dt><dd>Vue.js 3, Vite, GWT, JavaScript, HTML and CSS, Tailwind CSS, Bootstrap</dd></div>
-                        <div><dt>Data</dt><dd>PostgreSQL (modeling and query tuning), MySQL, MongoDB, JasperReports</dd></div>
-                        <div><dt>Infrastructure</dt><dd>Linux, VPS, Nginx, HTTPS with Certbot, Git and GitLab, Maven</dd></div>
+                        <div><dt>Back end</dt><dd>Java 8 to 21, Spring Boot, Jakarta EE / Java EE (EJB, JPA/Hibernate), WildFly, Node.js, REST APIs</dd></div>
+                        <div><dt>Infra and DevOps</dt><dd>Linux, VPS, Docker and Docker Compose, systemd, Nginx, HTTPS with Certbot, Bash, Git and GitLab, Maven</dd></div>
+                        <div><dt>Security</dt><dd>Credentials kept out of code, bcrypt password hashing, exposed port reviews, prompt injection protection, CTF and malware analysis courses (RNP)</dd></div>
+                        <div><dt>Front end</dt><dd>Vue.js 3, Vite, GWT, JavaScript, HTML and CSS, Tailwind CSS</dd></div>
+                        <div><dt>Data</dt><dd>PostgreSQL (modeling and query tuning), MySQL, MongoDB, Redis, JasperReports, pg_dump backups</dd></div>
                         <div><dt>AI and integrations</dt><dd>Local LLMs with Ollama, OpenAI API, WhatsApp integration, multi-tenant architecture</dd></div>
                     </dl>
                 </div>
@@ -203,7 +206,7 @@
         <!-- EXPERIENCE -->
         <section id="caminho" class="container section">
             <h2>How I got here</h2>
-            <p class="section-lead">From an internship at the Rondônia State Court of Justice to the tax ERP that runs in city governments.</p>
+            <p class="section-lead">From an internship at the Rondônia State Court of Justice to the tax ERP that runs in city governments, and now toward infrastructure and security.</p>
 
             <article class="award card">
                 <figure class="award-photo">
@@ -220,6 +223,17 @@
             </article>
 
             <ol class="journey">
+                <li class="card job">
+                    <div class="job-head">
+                        <span class="when"><span class="mark mark-accent"></span>now</span>
+                        <strong>Infrastructure and security track</strong>
+                        <span class="muted">Studying toward DevSecOps</span>
+                    </div>
+                    <ul class="pixel-list job-points">
+                        <li>Preparing for the AWS Cloud Practitioner certification</li>
+                        <li>Already applying it in S.A.G.E: Linux, Docker, systemd, Nginx, deploys and backups</li>
+                    </ul>
+                </li>
                 <li class="card job">
                     <div class="job-head">
                         <span class="when"><span class="mark mark-primary"></span>Jan 2026 – now</span>
@@ -324,6 +338,6 @@
         <a href="#inicio">Back to top</a>
     </footer>
 
-    <script src="../script.js?v=20261123d"></script>
+    <script src="../script.js?v=20261123e"></script>
 </body>
 </html>
